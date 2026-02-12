@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Packshot Editor Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+            },
+            colors: {
+              // Modern Dark Theme Palette
+              'app-bg': '#0f172a',       // Slate 900 - Main background
+              'panel-bg': '#1e293b',     // Slate 800 - Panel background
+              'surface-bg': '#334155',   // Slate 700 - Inputs/Secondary surfaces
+              
+              'brand-primary': '#38bdf8', // Sky 400 - Primary Action (Vibrant Blue/Cyan)
+              'brand-hover': '#0ea5e9',   // Sky 500
+              
+              'text-primary': '#f1f5f9',   // Slate 100
+              'text-secondary': '#94a3b8', // Slate 400
+              
+              'border-subtle': '#334155',  // Slate 700
+              
+              // Utility
+              'success': '#4ade80',       // Green 400
+              'error': '#f87171',         // Red 400
+            },
+            boxShadow: {
+              'glow': '0 0 15px rgba(56, 189, 248, 0.3)',
+              'panel': '0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3)',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f1f5f9;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569; 
+        }
+
+        .slider-thumb::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            background: #38bdf8;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #0f172a;
+            box-shadow: 0 0 5px rgba(56, 189, 248, 0.5);
+        }
+
+        .slider-thumb::-moz-range-thumb {
+            width: 16px;
+            height: 16px;
+            background: #38bdf8;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #0f172a;
+        }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
